@@ -6,8 +6,6 @@ import styles from './main.module.css'
 
 const MainLayout = () => {
 
-
-
   const [result, SetResult] = useState<string | undefined>();
 
   const handleResult = (result: string) => {
