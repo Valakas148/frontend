@@ -6,17 +6,17 @@ import styles from './main.module.css'
 
 const MainLayout = () => {
 
-  const [result, SetResult] = useState<string | undefined>();
+  const [results, setResults] = useState<{ name: string; number: string }[]>([]);
 
-  const handleResult = (result: string) => {
-    SetResult(result);
+  const handleResults = (results: { name: string; number: string }[]) => {
+    setResults(results);
   };
 
 
     return (
         <div  className={styles.mainLayout}>
-            <FileComponent onResult={handleResult}/>
-            <ResultComponent result={result}/>
+            <FileComponent onResults={handleResults}/>
+            <ResultComponent results={results}/>
         </div>
     );
 };
